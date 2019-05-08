@@ -8,5 +8,6 @@ BattlefieldMapFixFreeze:SetScript("OnEvent", function()
 	if ( BattlefieldMapFrame ) then
 		local mapID = MapUtil.GetDisplayableMapForPlayer()
 		BattlefieldMapFrame:SetMapID(mapID)
+		collectgarbage()
 	end
 end)
