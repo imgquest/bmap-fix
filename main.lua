@@ -5,7 +5,7 @@ BattlefieldMapFixFreeze:RegisterEvent("ZONE_CHANGED_INDOORS")
 BattlefieldMapFixFreeze:SetScript("OnEvent", function()
 	BattlefieldMap_LoadUI()
 
-	if ( BattlefieldMapFrame ) then
+	if  GetCVar("showBattlefieldMinimap") == "1" then
 		local mapID = MapUtil.GetDisplayableMapForPlayer()
 		BattlefieldMapFrame:SetMapID(mapID)
 		collectgarbage()
